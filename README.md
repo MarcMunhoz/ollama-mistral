@@ -9,7 +9,7 @@ Projeto fullstack com [Quasar (Vue 3)](https://quasar.dev) no frontend e [Ollama
 ```
 .
 ├── .vscode/               # Configurações do editor
-├── frontend/              # Aplicação Quasar (Vue 3)
+├── app/              # Aplicação Quasar (Vue 3)
 ├── secrets/               # Chaves privadas para Ollama (não versionadas)
 ├── Dockerfile             # Build da aplicação principal
 ├── Dockerfile.ollama      # Build opcional do Ollama (se necessário)
@@ -84,7 +84,7 @@ Caso queira trocar o modelo, edite o comando no `entrypoint.sh` ou `docker-compo
 
 > Apenas se você desejar rodar o frontend sem containers.
 
-1. Acesse a pasta `frontend/`:
+1. Acesse a pasta `app/`:
 
 ```bash
 cd frontend

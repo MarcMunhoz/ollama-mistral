@@ -5,11 +5,9 @@ LABEL author="Marcelo Munhoz <me@marcelomunhoz.com>" \
 
 WORKDIR /app
 
-COPY ["./frontend/package.json", "./frontend/yarn.lock", "./"]
+COPY ["./app/package.json", "./app/yarn.lock", "./"]
 
 RUN apk add exa && \
     yarn global add @quasar/cli && \
     yarn autoclean && yarn cache clean && \
     rm -rf /var/cache/apk/* /tmp/* /var/tmp/* /usr/share/man
-
-COPY frontend/ .

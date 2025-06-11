@@ -9,7 +9,7 @@ services:
     ports:
       - 9000:9000
     volumes:
-      - ./frontend:/app
+      - ./app:/app
     command: /bin/sh -c "yarn && yarn dev"
     depends_on:
       - ollama
