@@ -20,8 +20,6 @@ services:
       context: .
       dockerfile: Dockerfile.ollama
       no_cache: true
-    ports:
-      - 11434:11434
     volumes:
       - ollama-data:/root/.ollama
       - ./secrets/id_ed25519:/root/.ollama/id_ed25519:ro
@@ -30,3 +28,7 @@ services:
 
 volumes:
   ollama-data:
+   
+networks:
+  default:
+   name: ollama_network

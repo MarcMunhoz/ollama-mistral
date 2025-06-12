@@ -14,11 +14,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Updated `README.md`, `Dockerfile`, and `docker-compose.yaml` to reflect new structure
 - Updated Node.js target from 20 to 22 in `quasar.config.ts`
 - Changed Prettier setting: `singleQuote` is now `false` (uses double quotes)
+- Updated `quasar.config.ts` to write API route properly
+- Removed port 11434 from `docker-compose.yaml`
+- Added restriction to use only Yarn, disallowing npm
 
 ### Added
 
 - WSL-specific polling configuration in Quasar `devServer.watch`
 - Cleanup step in `make down` to remove `app/.quasar`
+- Added `middleware/server.ts` for backend Express API
+- Added route `/api/ollama` in frontend Axios requests
+- Added new dependencies: `concurrently`, `cors`, `express`, `http-proxy-middleware`
+- Added middleware target in `Makefile`
 
 ---
 
