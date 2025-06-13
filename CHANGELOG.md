@@ -34,6 +34,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Fixed
 
 - Fixed `docker compose build` command in `Makefile` (removed deprecated `docker-compose` syntax)
+- Resolved ESLint error caused by missing `parserOptions.project` for `@typescript-eslint` rules in flat config
 
 ---
 
