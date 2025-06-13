@@ -20,6 +20,8 @@ services:
       context: .
       dockerfile: Dockerfile.ollama
       no_cache: true
+    ports:
+      - 127.0.0.1:3000:11434
     volumes:
       - ollama-data:/root/.ollama
       - ./secrets/id_ed25519:/root/.ollama/id_ed25519:ro

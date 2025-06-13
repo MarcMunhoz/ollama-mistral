@@ -18,6 +18,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Removed port 11434 from `docker-compose.yaml`
 - Added restriction to use only Yarn, disallowing npm
 - Replaced `ts-node` with `tsx` in the backend (Express middleware) development script
+- Added TailwindCSS integration via PostCSS (postcss.config.js)
+- Exposed Ollama port to localhost
 
 ### Added
 
