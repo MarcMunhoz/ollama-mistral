@@ -21,6 +21,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Added TailwindCSS integration via PostCSS (postcss.config.js)
 - Exposed Ollama port to localhost
 - Updated Tailwind CSS PostCSS plugin import to `@tailwindcss/postcss` to support Tailwind v4
+- Changed backend to use `axios` instead of `node-fetch`
+- Updated backend route `/api/mistral/comment` to connect to Ollama API directly
+- Improved `docker-compose.yaml` networking: backend connects to `http://ollama:11434`
+- Adjusted Quasar `devServer.proxy` to forward `/api` to backend at `localhost:3000`
 
 ### Added
 
@@ -30,11 +34,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Added route `/api/ollama` in frontend Axios requests
 - Added new dependencies: `concurrently`, `cors`, `express`, `http-proxy-middleware`
 - Added middleware target in `Makefile`
+- Added route `/api/mistral/comment` to backend for Mistral via Ollama
 
 ### Fixed
 
 - Fixed `docker compose build` command in `Makefile` (removed deprecated `docker-compose` syntax)
 - Resolved ESLint error caused by missing `parserOptions.project` for `@typescript-eslint` rules in flat config
+- Fixed API call errors caused by incorrect usage of `node-fetch` typings in TypeScript
 
 ---
 

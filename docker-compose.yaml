@@ -8,12 +8,13 @@ services:
       no_cache: true
     ports:
       - 9000:9000
+      - 3000:3000
     volumes:
       - ./app:/app
     command: /bin/sh -c "yarn && yarn dev"
     depends_on:
       - ollama
-  
+
   ollama:
     container_name: ollama_ctn
     build:
@@ -21,7 +22,7 @@ services:
       dockerfile: Dockerfile.ollama
       no_cache: true
     ports:
-      - 127.0.0.1:3000:11434
+      - 127.0.0.1:11434:11434
     volumes:
       - ollama-data:/root/.ollama
       - ./secrets/id_ed25519:/root/.ollama/id_ed25519:ro
