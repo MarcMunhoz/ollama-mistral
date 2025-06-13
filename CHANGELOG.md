@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Replaced `ts-node` with `tsx` in the backend (Express middleware) development script
 - Added TailwindCSS integration via PostCSS (postcss.config.js)
 - Exposed Ollama port to localhost
+- Updated Tailwind CSS PostCSS plugin import to `@tailwindcss/postcss` to support Tailwind v4
 
 ### Added
 
