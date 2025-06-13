@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Updated `quasar.config.ts` to write API route properly
 - Removed port 11434 from `docker-compose.yaml`
 - Added restriction to use only Yarn, disallowing npm
+- Replaced `ts-node` with `tsx` in the backend (Express middleware) development script
 
 ### Added
 
@@ -26,6 +27,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Added route `/api/ollama` in frontend Axios requests
 - Added new dependencies: `concurrently`, `cors`, `express`, `http-proxy-middleware`
 - Added middleware target in `Makefile`
+
+### Fixed
+
+- Fixed `docker compose build` command in `Makefile` (removed deprecated `docker-compose` syntax)
 
 ---
 

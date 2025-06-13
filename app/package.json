@@ -10,7 +10,7 @@
     "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{ts,js,cjs,mjs,vue}\"",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
-    "dev": "concurrently \"quasar dev\" \"node --loader ts-node/esm middleware/server.ts\"",
+    "dev": "concurrently \"quasar dev\" \"tsx middleware/server.ts\"",
     "build": "quasar build"
   },
   "dependencies": {
@@ -37,7 +37,7 @@
     "eslint-plugin-vue": "^9.30.0",
     "globals": "^15.12.0",
     "prettier": "^3.3.3",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "vite-plugin-checker": "^0.9.0",
     "vue-tsc": "^2.0.29"
